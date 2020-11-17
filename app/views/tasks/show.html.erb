@@ -1,0 +1,14 @@
+<h1>Your task</h1>
+
+<ul>
+  <% if @task.completed? %>
+    <h1>  <%= @task.title %>  </h1>
+    <h3> <%= @task.details %>  </h3>
+    <p> [x] task completed</p>
+    <% else %>
+    <h1>  <%= @task.title %></h1>
+    <h3> <%= @task.details %>  </h3>
+    <p> [ ] Va bosser </p>
+    <% end %>
+</ul>
+<%= link_to "back", tasks_path(:task)%>
